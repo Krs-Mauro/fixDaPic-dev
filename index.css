@@ -1,0 +1,72 @@
+:root {
+  --deepBackgroundColor: #f9dcc4;
+  --backgroundColor: #f8edeb;
+  --accent: #ffb5a7;
+  --accentHover: #ffa08e;
+  --contrast: #284b63;
+}
+
+body {
+  background-color: var(--deepBackgroundColor);
+  margin: 0;
+  padding: 40px;
+}
+
+main {
+  background-color: var(--backgroundColor);
+  margin: 0;
+  padding: 20px 40px;
+  border-radius: 50px;
+}
+
+h1,
+h2 {
+  font-family: "Sacramento", sans-serif;
+}
+
+h3,
+h4 {
+  font-family: "Gloria Hallelujah", sans-serif;
+}
+
+a {
+  font-family: "Sacramento", sans-serif;
+  background-color: var(--accentHover);
+  padding: 10px 15px;
+  border-radius: 50px;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero {
+  display: flex;
+  flex-direction: row;
+}
+
+.cardHolder {
+  display: flex;
+  flex-direction: row;
+}
+
+.card {
+  background-color: var(--accent);
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin: 0px 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card:first-child {
+  margin-left: 0;
+}
+.card:last-child {
+  margin-right: 0;
+}
