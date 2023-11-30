@@ -70,3 +70,18 @@ header {
 .card:last-child {
   margin-right: 0;
 }
+
+.card img {
+  height: 37%;
+}
+
+.faq {
+  display: flex;
+  flex-direction: column;
+}
+
+.faq > :last-child {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
