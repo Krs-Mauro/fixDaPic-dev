@@ -5,6 +5,9 @@
   --accentHover: #ffa08e;
   --contrast: #284b63;
 }
+* {
+  box-sizing: border-box;
+}
 
 body {
   background-color: var(--deepBackgroundColor);
@@ -19,21 +22,42 @@ main {
   border-radius: 50px;
 }
 
-h1,
-h2 {
+h1 {
   font-family: "Sacramento", sans-serif;
+  font-size: 10rem;
+  color: var(--contrast);
 }
 
-h3,
+h2 {
+  font-family: "Sacramento", sans-serif;
+  color: var(--contrast);
+  font-size: 5rem;
+}
+
+h3 {
+  font-family: "Gloria Hallelujah", sans-serif;
+  color: var(--contrast);
+  font-size: 1.8rem;
+  -webkit-text-stroke: 1px var(--contrast);
+  -moz-text-stroke: 1px var(--contrast);
+}
+
 h4 {
   font-family: "Gloria Hallelujah", sans-serif;
+  color: var(--contrast);
+  font-size: 1.5rem;
 }
 
 a {
   font-family: "Sacramento", sans-serif;
   background-color: var(--accentHover);
-  padding: 10px 15px;
+  padding: 10px 35px 10px 30px;
   border-radius: 50px;
+  font-size: 2rem;
+  text-decoration: none;
+  color: var(--contrast);
+  -webkit-text-stroke: 1px var(--contrast);
+  -moz-text-stroke: 1px var(--contrast);
 }
 header {
   display: flex;
@@ -42,9 +66,54 @@ header {
   justify-content: space-between;
 }
 
-.hero {
+button {
+  outline: none;
+  border: none;
+  border-radius: 20px 0 0 20px;
+  padding: 40px 10px;
+  font-size: 1.5rem;
+  background-color: var(--accent);
+  font-family: "Gloria Hallelujah", sans-serif;
+  color: var(--contrast);
+}
+button:hover {
+  background-color: var(--accentHover);
+}
+
+.activeButton {
+  background-color: var(--accentHover);
+}
+
+.staticHeroContent {
   display: flex;
   flex-direction: row;
+  margin-bottom: 50px;
+}
+
+.showcase {
+  display: flex;
+  flex-direction: row;
+}
+.tabsContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.imageContainer {
+  display: none;
+  width: 300px;
+}
+
+#ICOne {
+  display: block;
+}
+
+.imageContainer {
+  width: 300px;
+}
+
+.imageContainer img {
+  width: 100%;
 }
 
 .cardHolder {
@@ -62,6 +131,7 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  text-align: center;
 }
 
 .card:first-child {

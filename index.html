@@ -17,21 +17,34 @@
         <h1>fix da pic</h1>
         <a href="staticApp.html">login</a>
       </header>
-      <section class="hero">
-        <div class="heroText">
-          <h4>Cheap & easy, lets fix your pics</h4>
-          <a href="staticApp.html">No login start</a>
+      <section>
+        <div class="staticHeroContent">
+          <div class="heroText">
+            <h4>Cheap & easy, lets fix your pics</h4>
+            <a href="staticApp.html">No login start</a>
+          </div>
+          <div class="showcase">
+            <div class="tabsContainer">
+              <button class="tabs" onclick="openTab(event, 'ICOne')">Grainy</button>
+              <button class="tabs" onclick="openTab(event, 'ICTwo')">Blurry</button>
+              <button class="tabs" onclick="openTab(event, 'ICThree')">Scratched</button>
+            </div>
+            <div class="imageContainer" id="ICOne">
+              <div class="imgWrap"><img src="/landingImages/grainy.jpg" alt=""></div>
+              <div class="imgWrap"><img src="/landingImages/grainyInverted.webp" alt=""></div>
+            </div>
+            <div class="imageContainer" id="ICTwo">
+              <div class="imgWrap"><img src="/landingImages/blurry.jpeg" alt=""></div>
+              <div class="imgWrap"><img src="/landingImages/blurryInverted.webp" alt=""></div>
+            </div>
+            <div class="imageContainer" id="ICThree">
+              <div class="imgWrap"><img src="/landingImages/scratched.jpeg" alt=""></div>
+              <div class="imgWrap"><img src="/landingImages/scratchedInverted.webp" alt=""></div>
+            </div>
+          </div>
         </div>
-        <div class="showcase">
-          <div class="tabsContainer">
-            <button class="tabs"></button>
-            <button class="tabs"></button>
-            <button class="tabs"></button>
-          </div>
-          <div class="imageContainer">
-            <div class="imgWrap"><img src="" alt=""></div>
-            <div class="imgWrap"><img src="" alt=""></div>
-          </div>
+        <div class="videoContainer">
+          <iframe src="https://www.youtube.com/embed/ZYUt4WE4Mrw" frameborder="0"></iframe>
         </div>
       </section>
       <section>
@@ -74,7 +87,7 @@
         <a href="">Contact</a>
       </section>
     </main>
-
+    <script src="/index.js" type="module"></script>
   </body>
 
 </html>
