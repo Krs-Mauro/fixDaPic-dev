@@ -101,7 +101,32 @@ button:hover {
 
 .imageContainer {
   display: none;
+  position: relative;
   width: 300px;
+  height: 400px;
+}
+
+.imgWrap {
+  position: absolute;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+}
+.imgWrap img {
+  display: block;
+  height: 400px;
+}
+
+.imgSlider {
+  position: absolute;
+  z-index: 9;
+  cursor: ew-resize;
+  /*set the appearance of the slider:*/
+  width: 40px;
+  height: 40px;
+  background-color: var(--accentHover);
+  opacity: 0.7;
+  border-radius: 50%;
 }
 
 #ICOne {
@@ -110,10 +135,6 @@ button:hover {
 
 .imageContainer {
   width: 300px;
-}
-
-.imageContainer img {
-  width: 100%;
 }
 
 .cardHolder {
