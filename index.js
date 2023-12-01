@@ -1,3 +1,3 @@
-import verticalTabsScript from "./verticalTabsScript";
+import verticalTabsScript from "./src/landingScripts/verticalTabsScript";
 
 verticalTabsScript();
