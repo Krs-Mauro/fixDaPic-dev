@@ -7,18 +7,18 @@ const initComparisons = () => {
 
 export default initComparisons;
 
-function compareImages(image) {
+function compareImages(img) {
   let clicked = 0;
 
-  const width = image.offsetWidth;
-  const height = image.offsetHeight;
+  const width = img.offsetWidth;
+  const height = img.offsetHeight;
 
-  image.style.width = width / 2 + "px";
+  img.style.width = width / 2 + "px";
 
   const slider = document.createElement("DIV");
   slider.setAttribute("class", "imgSlider");
 
-  image.parentElement.insertBefore(slider, image);
+  img.parentElement.insertBefore(slider, img);
 
   slider.style.top = height / 2 - slider.offsetHeight / 2 + "px";
   slider.style.left = width / 2 - slider.offsetWidth / 2 + "px";
@@ -44,22 +44,25 @@ function compareImages(image) {
   function slideMove(event) {
     if (clicked == 0) return false;
 
-    const relativePosition = getCursorPosition(event, image);
-    const position = relativePosition < 0 ? 0 : relativePosition;
+    let cursorPosition = getCursorPosition(event);
 
-    slide(position);
+    if (cursorPosition < 0) cursorPosition = 0;
+    if (cursorPosition > width) cursorPosition = width;
+
+    slide(cursorPosition);
   }
 
-  const slide = (position) => {
-    image.style.width = position + "px";
-    slider.style.left = image.offsetWidth - slider.offsetWidth / 2 + "px";
-  };
+  function getCursorPosition(event) {
+    event = event.changedTouches ? event.changedTouches[0] : event;
+
+    const imageCoordinates = img.getBoundingClientRect();
+    const position = event.pageX - imageCoordinates.left;
+
+    return position - window.scrollX;
+  }
+
+  function slide(position) {
+    img.style.width = position + "px";
+    slider.style.left = img.offsetWidth - slider.offsetWidth / 2 + "px";
+  }
 }
-
-const getCursorPosition = (event, image) => {
-  const realEvent = event.changedTouches ? event.changedTouches[0] : event;
-  const imagePosition = image.getBoundingClientRect();
-  const xAxisPosition = realEvent.pageX - imagePosition.left;
-
-  return xAxisPosition - window.scrollX;
-};
