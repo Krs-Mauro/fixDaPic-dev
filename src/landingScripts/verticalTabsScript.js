@@ -1,18 +1,28 @@
 const verticalTabsScript = () => {
-  const openTab = (event, imageId) => {
-    const tabContent = document.getElementsByClassName("imageContainer");
+  const imageNames = {
+    grainy: {
+      base: "grainy.jpg",
+      overlay: "grainyInverted.webp",
+    },
+    blurry: {
+      base: "blurry.jpeg",
+      overlay: "blurryInverted.webp",
+    },
+    scratched: {
+      base: "scratched.jpeg",
+      overlay: "scratchedInverted.webp",
+    },
+  };
 
-    for (let i = 0; i < tabContent.length; i++) {
-      tabContent[i].style.display = "none";
-    }
-
+  const openTab = (event, imageType) => {
     const tabs = document.getElementsByClassName("tabs");
 
     for (let i = 0; i < tabs.length; i++) {
       tabs[i].className = tabs[i].className.replace(" activeButton", "");
     }
 
-    document.getElementById(imageId).style.display = "block";
+    document.getElementById("base").src = `/landingImages/${imageNames[imageType].base}`;
+    document.getElementById("overlay").src = `/landingImages/${imageNames[imageType].overlay}`;
     event.currentTarget.className += " activeButton";
   };
 
