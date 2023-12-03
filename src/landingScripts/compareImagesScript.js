@@ -1,11 +1,11 @@
-const initComparisons = () => {
+const compareImagesScript = () => {
   const overlayedImages = document.getElementsByClassName("imgOverlay");
   for (let i = 0; i < overlayedImages.length; i++) {
     compareImages(overlayedImages[i]);
   }
 };
 
-export default initComparisons;
+export default compareImagesScript;
 
 function compareImages(img) {
   let clicked = 0;

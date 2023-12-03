@@ -9,11 +9,11 @@ const verticalTabsScript = () => {
     const tabs = document.getElementsByClassName("tabs");
 
     for (let i = 0; i < tabs.length; i++) {
-      tabs[i].className = tabs[i].className.replace("activeButton", "");
+      tabs[i].className = tabs[i].className.replace(" activeButton", "");
     }
 
     document.getElementById(imageId).style.display = "block";
-    event.currentTarget.className += "activeButton";
+    event.currentTarget.className += " activeButton";
   };
 
   window.openTab = openTab;
