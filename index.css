@@ -63,7 +63,11 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+}
+
+header a {
+  margin: 0 0 0 20vw;
 }
 
 button {
@@ -72,6 +76,7 @@ button {
   border-radius: 20px 0 0 20px;
   padding: 40px 10px;
   font-size: 1.5rem;
+  height: 133px;
   background-color: var(--accent);
   font-family: "Gloria Hallelujah", sans-serif;
   color: var(--contrast);
@@ -87,12 +92,15 @@ button:hover {
 .staticHeroContent {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 50px;
 }
 
 .showcase {
   display: flex;
   flex-direction: row;
+  margin: 0 0 0 10vw;
 }
 .tabsContainer {
   display: flex;
@@ -104,6 +112,8 @@ button:hover {
   position: relative;
   width: 300px;
   height: 400px;
+  overflow: hidden;
+  border-radius: 0px 20px 20px 0px;
 }
 
 .imgWrap {
@@ -135,6 +145,29 @@ button:hover {
 
 .imageContainer {
   width: 300px;
+}
+
+.videoContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+iframe {
+  width: 500px;
+  aspect-ratio: 16 / 9;
+}
+
+.price-plans {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.price-plans h4 {
+  margin: 0 0 1rem 0;
 }
 
 .cardHolder {
@@ -169,10 +202,12 @@ button:hover {
 .faq {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.faq h4 {
+  margin: 1rem 10vw;
 }
 
-.faq > :last-child {
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
+@media (min-width: 950px) {
 }
