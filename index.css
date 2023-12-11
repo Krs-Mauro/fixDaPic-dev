@@ -67,7 +67,7 @@ header {
 }
 
 header a {
-  margin: 0 0 0 20vw;
+  margin: 0 0 0 4rem;
 }
 
 button {
@@ -164,6 +164,7 @@ iframe {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .price-plans h4 {
@@ -209,5 +210,39 @@ iframe {
   margin: 1rem 10vw;
 }
 
-@media (min-width: 950px) {
+@media (max-width: 950px) {
+  h1 {
+    margin: 1rem 0;
+    font-size: clamp(4rem, 10rem, 15vw);
+  }
+  header a {
+    margin: 0 0 0 clamp(1rem, 4vw, 4rem);
+    padding: 5px 25px 5px 20px;
+  }
+  .staticHeroContent {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .heroText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .showcase {
+    margin: 4rem 0 0 0;
+  }
+
+  .cardHolder {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .card {
+    width: clamp(80%, 40vw, 320px);
+    margin: 0;
+  }
 }
