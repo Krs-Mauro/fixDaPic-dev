@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/Icon.svg" />
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Sacramento&display=swap">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reparemos tus fotos</title>
+  </head>
+
+  <body>
+    <main>
+      <header>
+        <h1>fix da pic</h1>
+        <a href="staticApp.html">login</a>
+        <a href="index.html">Inglés</a>
+      </header>
+      <section>
+        <div class="staticHeroContent">
+          <div class="heroText">
+            <h4>Barato y fácil, Reparemos tus fotos</h4>
+            <a href="staticApp.html">Comienza sin iniciar sesión</a>
+          </div>
+          <div class="showcase">
+            <div class="tabsContainer">
+              <button class="tabs activeButton" onclick="openTab(event, 'grainy')">Ruidosa</button>
+              <button class="tabs" onclick="openTab(event, 'blurry')">Borrosa</button>
+              <button class="tabs" onclick="openTab(event, 'scratched')">Rayada</button>
+            </div>
+            <div class="imageContainer" id="ICOne">
+              <div class="imgWrap"><img id="base" src="/landingImages/grainy.jpg" alt=""></div>
+              <div class="imgWrap imgOverlay"><img id="overlay" src="/landingImages/grainyInverted.webp" alt=""></div>
+            </div>
+          </div>
+        </div>
+        <div class="videoContainer">
+          <iframe src="https://www.youtube.com/embed/ZYUt4WE4Mrw" frameborder="0"></iframe>
+        </div>
+      </section>
+      <section class="price-plans">
+        <h2>¿Cuánto cuesta?</h2>
+        <h4>Aproximadamente 1 dólar* por imagen, dependiendo de la complejidad de tu solicitud</h4>
+      </section>
+      <section class="price-plans">
+        <h2>¿Hay Planes?</h2>
+        <div class="cardHolder">
+          <div class="card">
+            <h3>Pago por uso</h3>
+            <img src="/landingImages/CardOneIcon.png" alt="" class="cardImage">
+            <h4>~$1 por imagen</h4>
+            <a href="staticApp.html">Comienza sin iniciar sesión</a>
+          </div>
+          <div class="card">
+            <h3>Bastante uso</h3>
+            <img src="/landingImages/CardTwoIcon.png" alt="" class="cardImage">
+            <h4>$134 por usuario al mes, **amplios límites en imágenes</h4>
+            <a href="staticApp.html">Iniciar sesión</a>
+          </div>
+          <div class="card">
+            <h3>Números no importan</h3>
+            <img src="/landingImages/CardThreeIcon.png" alt="" class="cardImage">
+            <h4>Producción de fábrica, contáctanos para una cotización</h4>
+            <a href="">Contacto</a>
+          </div>
+        </div>
+      </section>
+      <section class="faq">
+        <h2>Preguntas frecuentes</h2>
+        <h4>* *Utilizamos una moneda extranjera para mantener los precios bajos, podría ser algunos centavos más o
+          meons, se te informará al momento de pagar.</h4>
+        <h4>** El límite es de aproximadamente 300 imágenes, depende de la complejidad de la tarea, conocerás la
+          cantidad restante.</h4>
+        <h4>*** No te rastreamos más allá de la información básica solicitada para iniciar sesión o pagos,no almacenamos
+          información de pago.</h4>
+        <h4>**** Puedes crear una cuenta y usarla con el plan de pago por uso, luego actualizar o cambiar de plan como
+          desees.</h4>
+        <a href="">Contacto</a>
+      </section>
+    </main>
+    <script src="/index.js" type="module"></script>
+  </body>
+
+</html>
