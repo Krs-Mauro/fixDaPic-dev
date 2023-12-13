@@ -1,6 +1,7 @@
+import PropTypes from "prop-types";
 import hideApp from "./landingScripts/hideApp";
 
-const App = (user) => {
+const App = ({ user }) => {
   return (
     <>
       <h1>{user ? "user " : "pay per use "} app</h1>
