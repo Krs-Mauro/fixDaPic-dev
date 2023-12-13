@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import hideApp from "./landingScripts/hideApp";
 
 const App = ({ user }) => {
