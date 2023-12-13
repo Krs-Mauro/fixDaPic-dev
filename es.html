@@ -15,16 +15,16 @@
 
   <body>
     <main>
-      <header>
+      <header id="header">
         <h1>fix da pic</h1>
-        <a href="/user">login</a>
+        <button onclick="showApp(true)">login</button>
         <a href="index.html">Inglés</a>
       </header>
       <section>
         <div class="staticHeroContent">
           <div class="heroText">
             <h4>Barato y fácil, Reparemos tus fotos</h4>
-            <a href="/app">Comienza sin iniciar sesión</a>
+            <a href="#root" onclick="showApp(false)">Comienza sin iniciar sesión</a>
           </div>
           <div class="showcase">
             <div class="tabsContainer">
@@ -53,13 +53,13 @@
             <h3>Pago por uso</h3>
             <img src="/landingImages/CardOneIcon.png" alt="" class="cardImage">
             <h4>~$1 por imagen</h4>
-            <a href="/app">Comienza sin iniciar sesión</a>
+            <a href="#root" onclick="showApp(false)">Comienza sin iniciar sesión</a>
           </div>
           <div class="card">
             <h3>Bastante uso</h3>
             <img src="/landingImages/CardTwoIcon.png" alt="" class="cardImage">
             <h4>$134 por usuario al mes, **amplios límites en imágenes</h4>
-            <a href="/user">Iniciar sesión</a>
+            <a href="#root" onclick="showApp(true)">Iniciar sesión</a>
           </div>
           <div class="card">
             <h3>Números no importan</h3>

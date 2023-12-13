@@ -1,16 +1,10 @@
-const App = () => {
-  if (window.location.pathname.includes("/app"))
-    return (
-      <>
-        <h1>Pay per use app</h1>
-        <a href="/">home</a>
-      </>
-    );
+import hideApp from "./landingScripts/hideApp";
 
+const App = (user) => {
   return (
     <>
-      <h1>User app</h1>
-      <a href="/">home</a>
+      <h1>{user ? "user " : "pay per use "} app</h1>
+      <button onClick={hideApp}>home</button>
     </>
   );
 };

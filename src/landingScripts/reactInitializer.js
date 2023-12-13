@@ -1,13 +1,19 @@
 import createRoot from "../main";
 
 const reactInitializer = () => {
-  if (window.location.pathname.includes("/app") || window.location.pathname.includes("/user")) {
+  const showApp = (user = false) => {
     document.querySelector("main").style.display = "none";
-    createRoot();
-  } else {
-    document.getElementById("root").style.display = "none";
-    document.querySelector("main").style.display = "block";
-  }
+
+    const appDiv = document.getElementById("root");
+
+    appDiv.style.display = "block";
+    appDiv.scrollIntoView({ behavior: "smooth" });
+
+    if (user) return createRoot(user);
+    return createRoot();
+  };
+
+  window.showApp = showApp;
 };
 
 export default reactInitializer;
